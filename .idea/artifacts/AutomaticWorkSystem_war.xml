@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AutomaticWorkSystem:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="AutomaticWorkSystem-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="AutomaticWorkSystem:war exploded" />
+    </root>
+  </artifact>
+</component>

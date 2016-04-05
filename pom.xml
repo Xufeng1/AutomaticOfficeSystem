@@ -135,13 +135,6 @@
 			<version>${mysql.version}</version>
 		</dependency>
 
-		<!-- jdbc -->
-		<dependency>
-			<groupId>jdbc</groupId>
-			<artifactId>jdbc</artifactId>
-			<version>${jdbc.version}</version>
-		</dependency>
-
 		<!-- spring核心包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
