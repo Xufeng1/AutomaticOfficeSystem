@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- define the aliases -->
+    <typeAliases>
+        <typeAlias alias="course" type="com.qunar.fresh.qcourse.model.entity.Course"/>
+        <typeAlias alias="courseDetail" type="com.qunar.fresh.qcourse.model.entity.CourseDetail"/>
+        <typeAlias alias="courseChapter" type="com.qunar.fresh.qcourse.model.entity.CourseChapter"/>
+        <typeAlias alias="courseSection" type="com.qunar.fresh.qcourse.model.entity.CourseSection"/>
+        <typeAlias alias="operatorLog" type="com.qunar.fresh.qcourse.model.entity.OperatorLog"/>
+        <typeAlias alias="speakerCourse" type="com.qunar.fresh.qcourse.model.entity.SpeakerCourse"/>
+        <typeAlias alias="studyRecord" type="com.qunar.fresh.qcourse.model.entity.StudyRecord"/>
+        <typeAlias alias="userCourse" type="com.qunar.fresh.qcourse.model.entity.UserCourse"/>
+        <typeAlias alias="sectionQuestion" type="com.qunar.fresh.qcourse.model.entity.SectionQuestion"/>
+        <typeAlias alias="questionChoice" type="com.qunar.fresh.qcourse.model.entity.QuestionChoice"/>
+        <typeAlias alias="Question" type="com.qunar.fresh.qcourse.model.entity.Question"/>
+        <typeAlias alias="Answer" type="com.qunar.fresh.qcourse.model.entity.Answer"/>
+        <typeAlias alias="userCourseInfo" type="com.qunar.fresh.qcourse.model.json.student_manage.UserCourseInfo"/>
+        <typeAlias alias="courseScrom" type="com.qunar.fresh.qcourse.model.entity.CourseScrom"/>
+    </typeAliases>
+
+    <!-- typeHandler -->
+    <typeHandlers>
+        <typeHandler handler="com.qunar.fresh.qcourse.model.handler.OperatorTypeHandler"
+                     javaType="com.qunar.fresh.qcourse.model.enumtype.OperatorType"/>
+        <typeHandler handler="com.qunar.fresh.qcourse.model.handler.LocalDateTypeHandler"
+                     javaType="org.joda.time.LocalDate"/>
+        <typeHandler handler="com.qunar.fresh.qcourse.model.handler.BindResourceTypeHandler"
+                     javaType="com.qunar.fresh.qcourse.model.entity.Question$BindResourceType"/>
+        <typeHandler handler="com.qunar.fresh.qcourse.model.handler.HasAnswerTypeHandler"
+                     javaType="com.qunar.fresh.qcourse.model.entity.Question$HasAnswerType"/>
+        <typeHandler handler="com.qunar.fresh.qcourse.model.handler.ZIndexTypeHandler"
+                     javaType="com.qunar.fresh.qcourse.model.entity.Question$ZIndexType"/>
+    </typeHandlers>
+
+    <!-- 支持数据库物理查询 -->
+    <plugins>
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.ResultSetHandlerInterceptor"/>
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.StatementHandlerInterceptor"/>
+    </plugins>
+
+</configuration>
